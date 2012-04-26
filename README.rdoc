@@ -1,0 +1,37 @@
+= dolphin-redis
+
+dolphin-redis is an extension enabling you to use redis as a backend to store
+your features.
+
+This gem requires Dolphin 0.9.3.
+
+== Configuration
+
+=== Initialize Dolphin with your custom store
+
+Instead of your traditional
+  Dolphin.init('/path/to/my/features.yaml');
+
+You can now specify to use redis as follow:
+  Dolphin.init_with_store(DolphinRedis::RedisFeatureStore.new())
+
+=== Configure the Redis connector
+
+<tt>RedisFeatureStore.new</tt> takes the following options:
+  store_key: specify the key you want to use inside Redis to store your features. This default to 'dolphin_features'.
+
+In addition to that, the options hash is also transfered directly to the Redis connector (using the 'redis' gem). You can specify any options recognized by that gem, including:
+  host: Specify the host to connect to (defaults to 'localhost')
+  port: Specify the port to connect to (defaults to '6379')
+
+== Usage
+
+Once Dolphin has been configured to use dolphin-redis as a custom feature store, you can use Dolphin as you always did. Just enjoy the power of the Redis.
+
+== Considerations
+
+Redis is a datastructure server, which is contacted regularly using a network connection. If the server can't be contacted for any reason (network failure, ...), all your features will be turned off (instead of failing every request).
+
+== License
+
+Copyright (c) 2012 Vivien Barousse, released under the MIT license
