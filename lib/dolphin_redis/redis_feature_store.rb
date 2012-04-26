@@ -1,3 +1,5 @@
+require 'redis'
+
 module DolphinRedis
   class RedisFeatureStore
 

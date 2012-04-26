@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = "dolphin-redis"
-  s.version           = "0.1.0"
+  s.version           = "0.1.1"
   s.summary           = "Redis support for the friendly feature flipper"
   s.author            = "Vivien Barousse"
   s.email             = "barousse.vivien@gmail.com"
