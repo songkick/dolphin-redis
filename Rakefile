@@ -1,9 +1,8 @@
 require 'bundler'
-
-require 'rspec/core/rake_task'
+require 'spec/rake/spectask'
 
 desc 'Default: run specs.'
 task :default => :spec
 
 desc "Run specs"
-RSpec::Core::RakeTask.new
+Spec::Rake::SpecTask.new
