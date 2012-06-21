@@ -1,5 +1,7 @@
 = dolphin-redis
 
+{<img src="https://secure.travis-ci.org/songkick/dolphin-redis.png?branch=master" alt="Build Status" />}[http://travis-ci.org/songkick/dolphin-redis]
+
 dolphin-redis is an extension enabling you to use redis as a backend to store
 your features.
 
