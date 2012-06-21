@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'redis'
 
-group :development do
+group :test do
   gem 'rspec'
+  gem 'rake'
 end
